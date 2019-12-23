@@ -358,7 +358,7 @@
                         let o = {name:k}
                         if (v === null || v === undefined || v.size === 0) {
                             titleArr.push(pre + k);
-                            let c = spanName === 'colspan' ? values.length :1 ;
+                            let c = spanName === 'colspan' ? (values.length > 1 ? values.length : 1) :1 ;
                             o[spanName] = c;
                             totalC += c;
                             tr.push(o)
